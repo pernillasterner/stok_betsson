@@ -1,0 +1,15 @@
+{
+	"name": "stok/greenhouse-plugin",
+	"authors": [
+		{
+			"name": "EJ Perez",
+			"email": "idyey04@gmail.com"
+		}
+	],
+	"description": "Imports Greenhouse jobs to custom post type.",
+	"require-dev": {
+	},
+	"require": {
+		"grnhse/greenhouse-tools-php": "~1.0"
+	}
+}

@@ -1,0 +1,131 @@
+.btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 9px 26px;
+    min-width: 160px;
+    letter-spacing: 1.17px;
+	@include transition( background-color, 0.5s, color, 0.5s );
+	white-space: normal;
+    @media (min-width: $screen-sm-min) {
+        padding: 14px 26px;
+        min-width: 200px;
+	}
+	&:hover,
+	&:active,
+	&:focus{
+		color: #ffffff;
+		outline: none;
+	}
+}
+
+.btn-sm {
+    padding: 9px 26px;
+    @include border-radius();
+}
+
+.btn-default {
+    &:hover {
+        background-color: $brand-primary;
+        color: white;
+    }
+}
+
+.btn-primary {
+    &:hover {
+        background-color: $brand-secondary;
+        border-color: $brand-secondary;
+    }
+}
+
+.btn-secondary {
+    background-color: $brand-secondary;
+    color: white;
+    &:hover {
+        background-color: $brand-primary;
+        color: white;
+    }
+}
+
+.btn-underlined{
+	padding: 5px 0;
+	position: relative;
+	min-width: auto;
+	color: #262729;
+	text-transform: capitalize;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+	font-size: 1.6rem;
+	@include transition( background-color, 0.5s, color, 0.5s );
+	&::before,
+	&::after{
+		content: "";
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		background: $brand-primary;	
+		bottom: 0;
+		left: 0;
+		display: block;
+		z-index: -1;
+		@include transitions( all, 0.5s );
+	}
+	&::after{
+		width: 0;
+		background: $brand-secondary;
+	}
+}
+
+a.btn-underlined {
+	display: inline-block;
+	&:hover,
+	&:active,
+	&:focus{
+		color: $brand-secondary;
+		@media(min-width: $screen-sm-min){
+			&::before{
+				width: 0;
+			}
+			&::after{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.button-top{
+	margin: 0 0 30px;
+	@media(min-width: $screen-sm-min){
+		margin: 0 0 70px;
+	}
+}
+
+.btn-full{
+	max-width: none;
+	min-width: auto;
+	width: 100%;
+	span{
+		font-size: 10px;
+	}
+
+	&.btn-secondary{
+		span{
+			color: $brand-primary;
+		}
+		&:hover{
+			span{
+				color: $brand-secondary;
+			}
+		}
+	}
+
+	&.btn-primary{
+		span{
+			color: $brand-secondary;
+		}
+		&:hover{
+			span{
+				color: $brand-primary;
+			}
+		}
+	}
+}

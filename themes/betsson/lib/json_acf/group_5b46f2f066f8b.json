@@ -1,0 +1,62 @@
+{
+    "key": "group_5b46f2f066f8b",
+    "title": "Post Type: Post",
+    "fields": [
+        {
+            "key": "field_5b5ad46fb5868",
+            "label": "Preamble",
+            "name": "preamble",
+            "type": "textarea",
+            "instructions": "If no value, the first paragraph from the 'Content' will automatically display as the preamble.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b5eb8eed5046",
+            "label": "Show published date?",
+            "name": "show_published_date",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1536043623
+}

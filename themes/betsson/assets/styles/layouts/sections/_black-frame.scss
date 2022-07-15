@@ -1,0 +1,156 @@
+/**
+** Black Frame Section
+** - Outside box
+**/
+.black-frame{
+    .container{
+        width: 100%;
+
+        @media (min-width: $screen-sm-min) {
+            max-width: 760px;
+        }
+        @media (min-width: $screen-md-min) {
+            max-width: 980px;
+        }
+        @media (min-width: $screen-lg-min) {
+            max-width: 1200px;
+        }
+        @media(min-width: 1650px){
+            max-width: 1600px;
+        }
+    }
+    &-container {
+        position: relative;
+        &.is-left {
+            .box {
+                @media (min-width: $screen-md-min) {
+                    margin-left: auto;
+                    padding: 70px 50px 70px 190px;
+                    text-align: right;
+                }
+                @media (min-width: $screen-md-min) {
+                    padding: 100px 50px 100px 190px;
+                }
+                @media(min-width: 1650px){
+                    padding: 170px 110px 110px 240px;
+                }
+            }
+            .image { 
+                @media (min-width: $screen-md-min) {
+                    right: initial;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .box {
+        @media (min-width: $screen-md-min) {
+            @include border-radius(6px);
+            max-width: 740px;
+            min-height: 450px;
+            padding: 70px 190px 70px 50px;
+            border: 10px solid $text-color;  
+        }
+       
+        @media (min-width: $screen-lg-min) {
+            max-width: 900px;
+            padding: 100px 190px 100px 50px;
+        }
+        @media(min-width: 1650px){
+            max-width: 1160px;
+            min-height: 600px;
+            padding: 170px 240px 110px 110px;
+        }
+
+        h3, .h3 {
+            margin-top: -3px;
+            margin-bottom: 10px;
+            font-size: $font-size-h4;
+            text-transform: uppercase;
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: 18px;
+            }
+            @media (min-width: $screen-lg-min) {
+                font-size: $font-size-h3;
+            }
+            a {
+                text-decoration: none;
+                color: $text-color;
+            }
+        }
+        .text {
+            margin-bottom: 10px;
+            color: $brand-primary;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: 3px;
+                font-size: 14px;
+            }
+        }
+        .lead {
+            margin-bottom: 0;
+        }
+    }
+    .image {
+        margin-top: 19px;
+        margin-left: -20px;
+        margin-right: -20px;
+        @media (min-width: $screen-md-min) {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -160px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media (min-width: $screen-lg-min) {
+            margin-top: -170px;
+        }
+        @media(min-width: 1650px){
+            margin-top: -225px;
+        }
+        figure {
+            @include custom-box-shadow(10px 10px 20px 0, $text-color, 0.1); 
+            height: 280px;
+            @media (min-width: $screen-md-min) {
+                width: 380px;
+                height: 320px;
+            }
+            @media (min-width: $screen-lg-min) {
+                width: 440px;
+                height: 340px;
+            }
+            @media(min-width: 1650px){
+                width: 600px;
+                height: 450px;
+            }
+        }
+    }
+    .button-bottom {
+        margin-top: 30px;
+        @media (min-width: $screen-md-min) {
+            margin-top: 50px;
+        }
+    }
+}
+
+.section.black-frame{
+    @media (max-width: $screen-sm-min){
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &.has-arrow:after,
+    &.has-arrow:before{
+        @media (max-width: $screen-sm-min){
+            display: none;
+        }
+    }
+    .text-center.button-bottom{
+        @media (max-width: $screen-sm-min){
+            margin-bottom: 50px;
+        }
+    }
+}

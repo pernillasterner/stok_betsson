@@ -1,0 +1,247 @@
+/**
+** Text Section
+** - Title, Content , Button, Image, Video?
+**/
+
+.content{
+	margin: 0 auto 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	&.text-uppercase{
+		font-weight: 400;
+	}
+	&.is-medium{
+		max-width: 760px;
+	}
+	&.is-small{
+		max-width: 570px;
+	}
+	&-wide{
+		width: 100%;
+		//max-width: 1670px;
+		margin: 0 auto 30px;
+		@media (min-width: $screen-sm-min) {
+			margin: 0 auto 70px;
+		}
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		margin: 0 auto 70px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&:empty{
+		display: none;
+	}
+
+	.image-holder,
+	.video-holder{
+		margin-bottom: 30px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 70px;
+		}
+
+	}
+
+}
+
+.container{
+	.section-title,
+	.content{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+.section-text{
+	.section-title + .button-top,
+	.button-top + .content{
+		margin-top: 30px;
+		@media (min-width: $screen-sm-min) {
+			margin-top: 70px;
+		}
+	}
+
+	.button-below{
+		margin-bottom: 30px;
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 70px;
+		}
+	}
+	.video-holder{
+		max-height: 245px;
+
+		@media (min-width: $screen-sm-min) {
+			max-height: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media (min-width: $screen-md-min) {
+			max-height: 800px;
+		}
+	}
+	.section-title + .video-holder{
+		margin-bottom: 30px;
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 70px;
+		}
+	}
+	.image-holder{
+		&.has-shadow{
+			@extend .shadow-big;
+		}
+	}
+
+	.container{
+		.image-holder,
+		.video-holder{
+			max-height: 245px;
+			//margin-bottom: 30px;
+			margin-left: -20px;
+			margin-right: -20px;
+			@media (min-width: $screen-sm-min) {
+				max-height: 515px;
+				//margin-bottom: 70px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.has-button-before,
+	&.has-button-after{
+
+			.image-holder,
+			.video-holder{
+				margin-bottom: 30px;
+				@media (min-width: $screen-sm-min) {
+					margin-bottom: 70px;
+				}
+			}
+
+			.button-below{
+				margin-bottom: 0;
+			}
+
+	}
+}
+
+.has-gradient{
+	position: relative;
+	&::after{
+		@include linear-gradient(180deg, rgba(38,39,41,0.5) 0%, rgba(0,0,0,0.5) 100%);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+}
+
+.video-holder{
+	background-color: $brand-primary;
+	// @include background-cover;
+	@include aspect-ratio(100%, 80%);
+	@extend .shadow-small;
+	.video-background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 5;
+	}
+	iframe {
+		z-index: 1;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.icon-play{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		@include centered();
+		z-index: 10;
+		cursor: pointer;
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+		}
+		&:after{
+			background: url('../images/play-btn.svg') no-repeat; // To follow svg
+			background-size: cover;
+		}
+		&:before{
+			z-index: 0;
+			background-color: #fff;
+			@include border-radius(50%);
+			@include transition(all 0.35s ease-in-out);
+			width: 50%;
+			height: 50%;
+			top: 15px;
+			left: 15px;
+			opacity: .7;
+			@include transform(scale(1));
+		}
+		&:focus,
+		&:hover{
+			outline: none;
+			&:before{
+				opacity: 0;
+				@include transform(scale(3));
+			}
+		}
+		@media (min-width: $screen-sm-min) {
+			width: 100px;
+			height: 100px;
+
+			&:before{
+				top: 25px;
+				left: 25px;
+			}
+		}
+	}
+	max-height: 245px;
+	@media (min-width: $screen-sm-min) {
+		max-height: 800px;
+	}
+}
+.image-holder{
+	@include aspect-ratio(100%, 80%);
+	max-height: 245px;
+	@media (min-width: $screen-sm-min) {
+		max-height: 800px;
+	}
+}
+
+.container{
+	.video-holder,
+	.image-holder{
+		max-height: 245px;
+		@media (min-width: $screen-sm-min) {
+			max-height: 515px;
+		}
+	}
+}

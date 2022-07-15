@@ -1,0 +1,91 @@
+/**
+** Offices
+**/
+
+.section-offices{
+	.is-small{
+		width: 100%;
+		max-width: 960px;
+	}
+	.container{
+		&.is-small{
+			@extend .is-small;
+		}
+		&.is-wide{
+			width: 100%;
+			max-width: 1590px!important;
+		}
+
+	}
+
+	&.section-contact{
+		.container{
+			@extend .is-small;
+		}
+	}
+
+	.office{
+		width: 100%;
+		max-width: 254px;
+		margin: 0 auto 30px;
+		text-align: center;
+		@media(min-width: $screen-sm-min){
+			max-width: 300px;
+			margin: 0 auto 60px;
+			text-align: left;
+		}
+		figure{
+			margin-bottom: 15px;
+			@extend .figure-img;
+			border: none!important;
+			@media(min-width: $screen-sm-min){
+				margin-bottom: 30px;
+			}
+		}
+		h3{
+			margin-bottom: 20px;
+			font-size: 3.6rem;
+			@media(min-width: $screen-sm-min){
+				font-size: 3rem;
+			}
+			@media(min-width: $screen-md-min){
+				font-size: 3.6rem;
+			}
+		}
+		.info {
+			opacity: .5;
+			text-align: center;
+			font-size: 1.6rem;
+			a {
+				color: $text-color;
+				&:hover{
+					color: $brand-primary;
+				}
+			}
+			.info-address {
+				color: $brand-primary;
+				font-weight: 500;
+				&:hover{
+					text-decoration: none;
+					color: $brand-secondary;
+				}
+			}
+			@media(min-width: $screen-sm-min){
+				text-align: left;
+			}
+		}
+		&:hover,
+		&:focus{
+			figure{
+				@extend .figure-img-hover;
+			}
+		}
+	}
+
+}
+
+.cards-carousel{
+	.office{
+		margin: 0 10px 0;
+	}
+}

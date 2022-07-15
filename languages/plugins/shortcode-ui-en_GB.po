@@ -1,0 +1,101 @@
+# Translation of Plugins - Shortcake (Shortcode UI) - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Shortcake (Shortcode UI) - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-09-12 23:53:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Shortcake (Shortcode UI) - Stable (latest release)\n"
+
+#: inc/class-shortcode-ui.php:115
+msgid "Shortcode UI is installed. Try out the shortcode UI through the \"Add Post element\" button in the post edit screen."
+msgstr "Shortcode UI is installed. Try out the shortcode UI through the \"Add Post element\" button in the post edit screen."
+
+#. Translators: link to plugin wiki page with examples of shortcodes supporting
+#. Shortcake UI
+#: inc/class-shortcode-ui.php:102
+msgid "The Shortcode UI plugin will not do anything unless UI is registered for shortcodes through a theme or plugins. For examples, see <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr "The Shortcode UI plugin will not do anything unless UI is registered for shortcodes through a theme or plugins. For examples, see <a href=\"%s\" target=\"_blank\">here</a>."
+
+#: inc/fields/class-shortcode-ui-field-attachment.php:146
+msgid "Attachment Details"
+msgstr "Attachment Details"
+
+#: inc/class-shortcode-ui.php:369
+msgid "Add Post Element"
+msgstr "Add Post Element"
+
+#. Author URI of the plugin
+msgid "http://next.fusion.net/tag/shortcode-ui/"
+msgstr "http://next.fusion.net/tag/shortcode-ui/"
+
+#. Author of the plugin
+msgid "Fusion Engineering and community"
+msgstr "Fusion Engineering and community"
+
+#. Description of the plugin
+msgid "User Interface for adding shortcodes."
+msgstr "User Interface for adding shortcodes."
+
+#. Plugin Name of the plugin
+msgid "Shortcake (Shortcode UI)"
+msgstr "Shortcake (Shortcode UI)"
+
+#: inc/templates/edit-form.tpl.php:3
+msgid "Back to list"
+msgstr "Back to list"
+
+#: inc/fields/class-shortcode-ui-field-attachment.php:80
+#: inc/fields/class-shortcode-ui-field-attachment.php:81
+msgid "Select Attachment"
+msgstr "Select Attachment"
+
+#: inc/class-shortcode-ui.php:437
+msgid "Something's rotten in the state of Denmark"
+msgstr "Something's rotten in the state of Denmark"
+
+#: inc/class-shortcode-ui.php:322
+msgid "Insert Content"
+msgstr "Insert Content"
+
+#: inc/class-shortcode-ui.php:321
+msgid "Search"
+msgstr "Search"
+
+#: inc/class-shortcode-ui.php:320
+msgid "Failed to load preview"
+msgstr "Failed to load preview"
+
+#: inc/class-shortcode-ui.php:319
+msgid "There are no attributes to configure for this Post Element."
+msgstr "There are no attributes to configure for this Post Element."
+
+#: inc/class-shortcode-ui.php:318
+msgid "Update"
+msgstr "Update"
+
+#: inc/class-shortcode-ui.php:317
+msgid "Insert Element"
+msgstr "Insert Element"
+
+#. Translators: Ignore placeholder. This is replaced with the Shortcode name
+#. string in JS
+#: inc/class-shortcode-ui.php:316
+msgid "%s Details"
+msgstr "%s Details"
+
+#: inc/class-shortcode-ui.php:313 inc/class-shortcode-ui.php:314
+msgid "Insert Post Element"
+msgstr "Insert Post Element"
+
+#: inc/class-shortcode-ui.php:157
+msgid "Inner Content"
+msgstr "Inner Content"
+
+#: inc/fields/class-shortcode-ui-field-attachment.php:153
+msgid "Edit Attachment"
+msgstr "Edit Attachment"

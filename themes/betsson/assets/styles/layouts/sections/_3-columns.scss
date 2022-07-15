@@ -1,0 +1,39 @@
+/**
+** 3 Columns
+**/
+.section-three-col{
+	font-size: 1.4rem;
+
+	article{
+		margin-bottom: 30px;
+		figure,	h3,	p{
+			margin: 0 0 20px;
+		}
+		h3{
+			letter-spacing: 0.5px;
+			font-size: 2.4rem;
+			font-weight: bold;
+		}
+		figure{
+			text-align: center;
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.button-below,
+	.button-bottom{
+		margin-top: 30px;
+		@media(min-width: $screen-sm-min){
+			margin-top: 70px;
+		}
+	}
+
+	+ .section-three-col{
+		margin-top: -35px;
+		@media(min-width: $screen-sm-min){
+			margin-top: -70px;
+		}
+	}
+}

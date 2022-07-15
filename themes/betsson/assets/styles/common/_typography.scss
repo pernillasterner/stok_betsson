@@ -1,0 +1,78 @@
+//Default styles
+html {
+	font-size: 62.5%;
+}
+
+body{
+    @include font-smoothing;
+    font-weight: 300;
+    font-size: 14px;
+    @media (min-width: $screen-sm-min) {
+        font-size: $font-size-base;
+    }
+}
+
+.h1, h1 {
+    @media (max-width: $screen-xs-max) {
+        font-size: 4.8rem;
+    }
+}
+.h2, h2 {
+	font-size: 3rem;
+	@media (min-width: 350px) {
+		font-size: 3.6rem;
+	}
+	@media (min-width: $screen-sm-min) {
+		font-size: 6.6rem;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: 7.2rem;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: 8.8rem;
+	}
+}
+.h3, h3 {
+    @media (max-width: $screen-xs-max) {
+        font-size: 2.4rem;
+    }
+}
+.h4, h4 {
+    @media (max-width: $screen-xs-max) {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+}
+.h5, h5 {
+    font-weight: 500;
+    @media (max-width: $screen-xs-max) {
+        font-size: 1.6rem;
+    }
+}
+
+
+small,
+.small {
+  font-size: 14px;
+}
+
+.lead {
+    font-size: 14px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 2.2rem; // ~22px
+    }
+}
+
+.medium {
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 2.4rem; // ~24px
+    }
+}
+
+.large {
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 2.8rem; // ~28px
+    }
+}

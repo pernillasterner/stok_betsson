@@ -1,0 +1,76 @@
+/**
+** FAQ
+** -
+**/
+
+.section{
+	&.faq {
+		.accordion {
+			max-width: 760px;
+			margin: 0 auto;
+		}
+		.button-top {
+			margin-bottom: 30px;
+			@media (min-width: $screen-sm-min) {
+				margin-bottom: 75px;
+			}
+		}
+		.button-bottom {
+			margin-top: 30px;
+			@media (min-width: $screen-sm-min) {
+				margin-top: 75px;
+			}
+		}
+		.faq-item {
+			@include custom-box-shadow(2px 2px 4px 0, rgb(38, 39, 41), 0.2);
+		}
+		.faq-title {
+			@extend .small;
+			background: $white;
+			margin-bottom: 0;
+			padding: 13px 65px 12px 15px;
+			cursor: pointer;
+			outline: none;
+			font-weight: 500;
+			text-transform: uppercase;
+			position: relative;
+			.icon {
+				top: 16px;
+				right: 35px;
+				font-size: 10px;
+				position: absolute;
+				color: $brand-primary;
+				@include transitions(all, .3s);
+			}
+			&.ui-state-active {
+				.icon {
+					-webkit-animation: flip-horizontal-top 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+					animation: flip-horizontal-top 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+				}
+			}
+			@media (min-width: $screen-sm-min) {
+				padding: 22px 70px 22px 40px;
+				.icon {
+					top: 26px;
+				}
+			}
+		}
+		.faq-content {
+			background: $white;
+			padding: 0 15px 15px;
+			letter-spacing: 1px;
+			line-height: 26px;
+			font-weight: 300;
+			@media (min-width: $screen-sm-min) {
+				padding: 0 40px 30px;
+			}
+		}
+
+		.section-title{
+			margin-bottom: 30px;
+			@media (min-width: $screen-sm-min) {
+				margin-bottom: 70px;
+			}
+		}
+	}
+}

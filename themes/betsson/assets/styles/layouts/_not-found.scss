@@ -1,0 +1,82 @@
+.not-found {
+    height:100vh;
+    min-height: 100%;
+    position: relative;
+    @media (min-width: $screen-md-min) {
+        height: calc( 100vh - 32px);
+	}
+
+	/* Landscape */
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 736px)
+	and (orientation: landscape) {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+    &-info {
+        width: 100%;
+        @include vertical-align( absolute );
+        left: 0;
+        right: 0;
+    }
+    .brand {
+        .img-responsive {
+            margin-bottom: 30px;
+            max-width: 170px;
+            @media (min-width: 561px) {
+                max-width: initial;
+            }
+            @media (max-width: $screen-sm-max) {
+                margin: 0 auto 20px;
+            }
+        }
+    }
+    .section {
+        margin-bottom: 0;
+    }
+    .black-frame {
+        @media (max-width: $screen-sm-max) {
+            text-align: center;
+        }
+        .image {
+            figure {
+                @media (max-width: $screen-xs-max) {
+                    height: 120px;
+                }
+            }
+        }
+    }
+    .button-bottom {
+        max-width: 196px;
+        margin: 0 auto;
+        @media (min-width: 561px) {
+            max-width: initial;
+        }
+        .btn + .btn {
+            margin-top: 10px;
+            @media (min-width: 561px) {
+                margin-left: 10px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.admin-bar {
+    .not-found {
+        height: calc( 100vh - 46px);
+        @media (min-width: 783px) {
+            height: calc( 100vh - 32px);
+		}
+		/* Landscape */
+		@media only screen
+		and (min-device-width: 320px)
+		and (max-device-width: 736px)
+		and (orientation: landscape) {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+    }
+}

@@ -1,0 +1,241 @@
+/**
+** Block Quote
+**/
+.blockquote-container{
+    .container{
+        @media (min-width: $screen-lg-min){
+            width: 1151px;
+        }
+        & + .button-bottom{
+            margin-top: 15px;
+            text-align: center;
+            @media (min-width: $screen-sm-min){
+                margin-top: 70px;
+            }
+        }
+    }
+    .image,
+    .quote{
+        @media (min-width: $screen-md-min){
+            float: right;
+        }
+    }
+    .image{
+        width: 250px;
+        margin: 0 auto 30px;
+        @media (min-width: $screen-md-min){
+            margin-top: 25px;
+            margin-left: -29px;
+        }
+        figure{
+            min-height: 187px;
+            max-height: 187px;
+            box-shadow: 10px 10px 20px 0 rgba(38,39,41,0.1);
+            img{
+                
+            }
+        }
+        
+    }
+    .quote{
+        width: 100%;
+        position: relative;
+        @media (min-width: $screen-sm-min){
+            margin: 0 auto;
+        }
+        @media (min-width: $screen-md-min){
+            width: 719px;
+            margin: 0;
+        }
+        @media (min-width: $screen-lg-min){
+            width: 890px;
+        }
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 33px;
+            height: 21px;
+            background-image: url("../images/Quotemarks.svg");
+            background-repeat: no-repeat;
+            background-size: 33px 21px;
+            @media (min-width: $screen-md-min){
+                width: 58px;
+                height: 40px;
+                background-size: 58px 40px;
+            }
+        }
+        &:before{
+            top: 31px;
+            left: -2px;
+            @media (min-width: $screen-sm-min){
+                top: 3px;
+                left: 0;
+            }
+            @media (min-width: $screen-md-min){
+                left: -1px;
+            }
+        }
+        &:after{
+            top: 31px;
+            right: -10px;
+            @media (min-width: $screen-sm-min){
+                top: 3px;
+                right: 0;
+            }
+            @media (min-width: $screen-md-min){
+                right: -12px;
+            }
+        }
+        .content{
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin: 0 auto;
+            @media (min-width: $screen-sm-min){
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+            @media (min-width: $screen-md-min){
+                width: 580px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media (min-width: $screen-lg-min){
+                width: 740px;
+            }
+            .text{
+                padding-left: 4px;
+                margin-bottom: 11px;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 13px;
+                text-transform: uppercase;
+                @media (min-width: $screen-sm-min){
+                    padding-left: 11px;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+                @media (min-width: $screen-md-min){
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+                strong{
+                    font-weight: 700;
+                }
+            }
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+                @media (min-width: $screen-md-min){
+                    font-size: 28px;
+                    line-height: 38px;
+                }
+            }
+        }  
+    }
+}
+
+//=======================================================
+// SECTION BLOCKQUOUTE
+//=======================================================
+.section.blockquote{
+    &.no-image{
+        .container{
+            .quote{
+                float: unset;
+                margin: 0 auto;
+                &:after{
+                    top: 31px;
+                    right: -10px;
+                    @media (min-width: $screen-sm-min){
+                        top: 3px;
+                        right: 0;
+                    }
+                    @media (min-width: $screen-md-min){
+                        right: -1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//=======================================================
+// SELECTED PAGE
+//=======================================================
+.section.selected-page{
+    .blockquote-container{
+        .container{
+            @media (min-width: $screen-sm-min){
+                width: 720px;
+            }
+            @media (min-width: $screen-md-min){
+                width: 980px;
+                margin-left: 0;
+            }
+            @media (min-width: $screen-lg-min){
+                width: 1035px;  
+            }
+            .image{
+                width: 100%;
+                @media (min-width: 450px){
+                    width: 334px;
+                }
+                @media (min-width: $screen-md-min){
+                    margin-top: 15px;
+                    margin-left: -27px;
+                }
+                figure{
+                    min-height: 248px;
+                    max-height: 248px;
+                }
+            }
+            .quote{
+                @media (min-width: $screen-md-min){
+                    width: 631px;
+                }
+                @media (min-width: $screen-lg-min){
+                    width: 688px;
+                }
+                &:before{
+                    top: 0;
+                    left: -5px;
+                    @media (min-width: $screen-sm-min){
+                        left: 0;
+                    }
+                    @media (min-width: $screen-md-min){
+                        left: -5px;
+                    }
+                }
+                &:after{
+                    top: 0;
+                    right: -6px;
+                    @media (min-width: $screen-sm-min){
+                        right: 0;
+                    }
+                    @media (min-width: $screen-md-min){
+                        right: -6px;
+                    }
+                }
+                .content{
+                    @media (min-width: $screen-md-min){
+                        margin: 0;
+                        width: 100%;
+                        padding-left: 83px;
+                        padding-right: 57px;
+                    }
+                    p{
+                        text-align: center;
+                        @media (min-width: $screen-sm-min){
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

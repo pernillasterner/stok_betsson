@@ -1,0 +1,188 @@
+/**
+** Find Jobs Section
+** -
+**/
+.section.find-jobs{
+    .container{
+        @media (min-width: $screen-lg-min) {
+            width: 1225px;
+        }
+        @media (min-width: 1300px) {
+            width: 1302px;
+        }
+        .section-title{
+            margin-bottom: 32px;
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: 80px;
+            }
+        }
+        .departments{
+            width: 100%;
+            text-align: center;
+            & + .button-bottom{
+                margin-top: 0;
+                @media (min-width: $screen-sm-min) {
+                    margin-top: 40px;
+                }
+            }
+            ul{
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                li{
+                    @include departmentColCount(2);
+                    position: relative;
+                    display: inline-block;
+                    margin: 0 5px;
+                    margin-bottom: 50px;
+                    vertical-align: top;
+                    @media (min-width: 769px) {
+                        @include departmentColCount(4);
+                        margin-bottom: 60px;
+                    }
+                    a{
+                        &:hover{
+                            text-decoration: none;
+                            .text{
+                                color: $brand-secondary;
+                            }
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                        figure{
+                            height: 110px;
+                            margin-bottom: 18px;
+                            @media (min-width: $screen-sm-min) {
+                                height: 182px;
+                                margin-bottom: 48px;
+                            }
+                            img{
+                                width: 100%;
+                                max-width: 110px;
+                                max-height: 110px;
+                                margin: 0 auto;
+                                @media (min-width: $screen-sm-min) {
+                                    max-width: 182px;
+                                    max-height: 182px;
+                                }
+                            }
+                        }
+                        .text{
+                            @include transitions( all, .5s );
+                            width: 100%;
+                            color: #000000;
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 13px;
+                            text-transform: uppercase;
+                            @media (min-width: $screen-sm-min) {
+                                font-size: 18px;
+                                line-height: 20px;
+                            }
+                            @media (min-width: $screen-lg-min) {
+                                font-size: 22px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Departments Filter
+.departments-filter{
+    margin-bottom: 25px;
+    @media (min-width: $screen-sm-min){
+        margin-bottom: 35px;
+    }
+    & + .section.is-first{
+        padding-top: 0;
+    }
+    .container{
+        @media (min-width: $screen-lg-min) {
+            width: 1225px;
+        }
+        @media (min-width: 1600px) {
+            width: 1446px;
+        }
+        & > h6{
+            margin: 0;
+            margin-bottom: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            @media (min-width: $screen-sm-min){
+                margin-bottom: 43px;
+                font-size: inherit;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+        }
+        .departments{
+            width: 100%;
+            text-align: center;
+            ul{
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                li{
+                    position: relative;
+                    display: inline-block;
+                    @include departmentColCount(2);
+                    margin: 0 7px;
+                    margin-bottom: 25px;
+                    vertical-align: top;
+                    @media (min-width: 361px) {
+                        @include departmentColCount(3);
+                    }
+                    @media (min-width: $screen-sm-min) {
+                        @include departmentColCount(6);
+                        margin: 0 5px;
+                        margin-bottom: 45px;
+                    }
+                    @media (min-width: $screen-lg-min) {
+                        @include departmentColCount(11);
+                    }
+                    a{
+                        &:hover{
+                            text-decoration: none;
+                            .text{
+                                color: $brand-secondary;
+                            }
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                        figure{
+                            height: 58px;
+                            margin-bottom: 15px;
+                            @media (min-width: $screen-sm-min) {
+
+                            }
+                            img{
+                                width: 100%;
+                                max-width: 58px;
+                                max-height: 58px;
+                                margin: 0 auto;
+                            }
+                        }
+                        .text{
+                            @include transitions( all, .5s );
+                            width: 100%;
+                            color: #000000;
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 13px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

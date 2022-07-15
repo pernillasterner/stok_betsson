@@ -1,0 +1,76 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+
+$grid-gutter-width:         40px !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1240px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$container-large-desktop:      (1160px + $grid-gutter-width) !default;
+$container-lg:                 $container-large-desktop !default;
+
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+$grid-float-breakpoint:     $screen-md-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+// Colors
+
+$font-family-base:    	  'Montserrat', Arial, Helvetica, sans-serif !default;
+$brand-primary:           #00A1AF !default;
+$brand-secondary:         #F38B00 !default;
+$text-color:              #262729 !default;
+$headings-color:          $text-color !default;
+$link-hover-color:        $brand-primary !default;
+$submenu-bg:              $text-color !default;
+$shadow-color:            $text-color !default;
+
+$header-overlay:          $text-color !default;
+$footer-color:            $text-color !default;
+
+
+
+$font-size-base:          16px !default;
+$font-size-base-rem:      1.6;
+$font-unit:				  1rem;
+$font-body-rem:			  $font-size-base-rem * $font-unit;
+$font-size-large:         ceil(($font-size-base * 1.2)) !default; // ~22px
+$font-size-small:         ceil(($font-size-base * 0.5)) !default; // ~14px
+
+$headings-font-family:    'Montserrat', Helvetica, Arial, sans-serif !default;
+$headings-font-weight:    700 !default;
+
+$font-size-h1:            ceil($font-size-base-rem * 6.25) * $font-unit; // ~100px
+$font-size-h2:            ($font-size-base-rem * 5.5)  * $font-unit; // ~88px
+$font-size-h3:            ($font-size-base-rem * 4.125) * $font-unit; // ~66px
+$font-size-h4:            ($font-size-base-rem * 2.25 ) * $font-unit; // 36px
+$font-size-h5:            ($font-size-base-rem * 1.5 ) * $font-unit; // 24px
+$font-size-h6:            $font-body-rem; // ~16px
+
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
+$headings-line-height:    1.1 !default;
+
+$btn-font-weight:				500;
+$btn-default-color:             $brand-secondary !default;
+$btn-default-bg:                #fff !default;
+$btn-default-border:            #fff !default;
+
+$btn-border-radius-base:        0;
+$btn-primary-bg:                $brand-primary !default;
+$btn-primary-border:            $brand-primary !default;
+
+$white : 						#fff;

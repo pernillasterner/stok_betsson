@@ -1,0 +1,58 @@
+{
+	"dependencies": {
+		"main.js": {
+			"files": [
+				"scripts/main.js",
+				"scripts/mobile.js",
+				"scripts/global.js",
+				"scripts/video.js",
+				"scripts/main.js",
+				"scripts/scroll.js",
+				"scripts/vendor/flickity/flickity.js",
+				"scripts/vendor/jquery-ui-accordion/jquery-ui.js",
+				"scripts/vendor/typed/typed.js",
+				"scripts/vendor/select2/select2.js",
+				"scripts/vendor/jquery-validation/jquery.validate.js",
+				"scripts/vendor/jquery-validation/additional-methods.js",
+				"scripts/vendor/crypto-js/crypto-js.js",
+				"scripts/vendor/FitText/jquery.fittext.js",
+				"scripts/departments.js",
+				"scripts/job-results.js",
+				"scripts/featured-jobs.js",
+				"scripts/form.js",
+				"scripts/faq.js",
+				"scripts/news.js",
+				"scripts/mobile-slider.js",
+				"scripts/job.js",
+				"scripts/toggler.js",
+				"scripts/image-switch.js",
+				"scripts/banner.js",
+				"scripts/filter.js",
+				"scripts/menu.js",
+				"scripts/listing.js",
+				"scripts/cookie.js",
+				"scripts/slider.js"
+			],
+			"main": true
+		},
+		"main.css": {
+			"files": [
+				"styles/main.scss"
+			],
+			"main": true
+		},
+		"customizer.js": {
+			"files": [
+				"scripts/customizer.js"
+			]
+		},
+		"jquery.js": {
+			"bower": [
+				"jquery"
+			]
+		}
+	},
+	"config": {
+		"devUrl": "http://example.dev"
+	}
+}

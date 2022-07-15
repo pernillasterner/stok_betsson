@@ -1,0 +1,63 @@
+/**
+** 50/50 Section
+** -
+**/
+
+
+.fifty-fifty{
+	.col-content,
+	.section-title{
+		margin-bottom: 30px;
+	}
+
+	h2 a{
+		color: $text-color;
+		@include transitions( all, 0.5s );
+		&:hover{
+			color: $brand-primary;
+			text-decoration: none;
+		}
+	}
+
+	.image-holder,
+	.video-holder{
+		margin-bottom: 30px;
+		max-height: 245px;
+		min-height: 245px;
+		background-color: $brand-primary;
+		@extend .shadow-small;
+		margin-right: -20px;
+		margin-left: -20px;
+		@media(min-width: $screen-xs-min){
+			max-height: 260px;
+			min-height: 260px;
+		}
+		@media(min-width: $screen-sm-min){
+			max-height: 300px;
+			min-height: 300px;
+			margin-right: 0;
+			margin-left: 0;
+		}
+		@media(min-width: $screen-md-min){
+			max-height: 400px;
+			min-height: 400px;
+		}
+	}
+	h2.h4{
+		a{
+			color: $text-color;
+			&:hover,
+			&:focus{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+ /* Small Devices, Tablets */
+ @media only screen and (max-width : 768px) {
+	.text-sm-centered{
+		text-align: center;
+	}
+}

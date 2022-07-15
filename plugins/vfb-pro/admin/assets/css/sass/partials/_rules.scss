@@ -1,0 +1,97 @@
+.vfb-rules-table {
+	.vfb-add-condition,
+	.vfb-delete-condition {
+		font-size: 18px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	td {
+		padding-left: 0;
+	}
+
+	.vfb-add-condition:hover {
+		color: $color-green;
+	}
+
+	.vfb-delete-condition:hover {
+		color: $color-red;
+	}
+
+	.vfb-condition-col-if {
+		width: 10%;
+	}
+
+	.vfb-rules-select {
+		max-width: 200px;
+
+		&.vfb-rules-select-type,
+		&.vfb-rules-select-match {
+			width: 70px;
+		}
+
+		&.vfb-rules-select-condition {
+			max-width: 100px;
+		}
+
+		&.vfb-rules-select-label {
+			width: 200px;
+		}
+	}
+}
+
+.vfb-rule-email-value {
+	width: 40% !important;
+}
+
+.vfb-rule-email-email {
+	width: 45% !important;
+}
+
+#vfbp-rules-settings {
+	.vfb-rules-actions-delete:hover {
+		color: $color-red;
+	}
+
+	.vfb-rules-actions-add:hover {
+		color: $color-green;
+	}
+}
+
+.vfbp-rules-autocomplete {
+	text-align: left;
+	cursor: default;
+	border: 1px solid $color-gray-lighter;
+	border-top: 0;
+	background: $color-white;
+	position: absolute;
+	display: block;
+	z-index: 9999;
+	max-height: 254px;
+	overflow: hidden;
+	overflow-y: auto;
+	box-sizing: border-box;
+	box-shadow: 0 5px 10px rgba($color-black, 0.2);
+
+	.autocomplete-suggestion {
+		position: relative;
+		padding: 5px 10px;
+		line-height: 23px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 14px;
+		color: $color-black-light;
+
+		b {
+			font-weight: normal;
+			color: $color-blue;
+		}
+
+		&.selected {
+			background: $color-white-faded;
+		}
+	}
+}

@@ -1,0 +1,362 @@
+/***************************************************************
+* Media Queries
+***************************************************************/
+@mixin media-min( $min ) {
+	@media screen and (min-width: #{ $min }) {
+		@content;
+	}
+}
+
+// parameter example: $screen-xs-min, $screen-xs-max
+@mixin media-between( $min, $max ) {
+	@media screen and ( min-width: #{$min} ) and ( max-width: #{$max} ) {
+		@content;
+	}
+}
+
+// parameter example: $screen-xs
+@mixin media-max( $max ) {
+	@media  screen and ( max-width: #{$max} ) {
+		@content;
+	}
+}
+
+/***************************************************************
+* Mixin Helper
+***************************************************************/
+
+@mixin vertical-align( $position: relative ) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin transition( $transition... ) {
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+@mixin transitions( $attr, $sec ) {
+	-webkit-transition: $attr $sec ease;
+	-moz-transition: $attr $sec ease;
+	-o-transition: $attr $sec ease;
+	transition: $attr $sec ease;
+}
+
+@mixin delay( $delay ) {
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin transform( $rotate ) {
+	-ms-transform: $rotate;
+	-webkit-transform: $rotate;
+	transform: $rotate;
+}
+
+@mixin border-radius( $radius: 0 ) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow( $color, $opacity ) {
+	-webkit-box-shadow: 0px 0px 34px 0px rgba( $color,$opacity );
+	-moz-box-shadow: 0px 0px 34px 0px rgba( $color,$opacity );
+	box-shadow: 0px 0px 34px 0px rgba( $color,$opacity );
+}
+
+@mixin custom-box-shadow($size, $color, $opacity) {
+	-webkit-box-shadow: $size rgba($color,$opacity);
+	-moz-box-shadow: $size rgba($color,$opacity);
+	box-shadow: $size rgba($color,$opacity);
+}
+
+@mixin all-box-shadow($param...) {
+	-webkit-box-shadow: $param;
+	-moz-box-shadow: $param;
+	box-shadow: $param;
+}
+
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin linear-gradient($angle, $color-stops...) {
+	$_angle-with-vendor-prefix: "";
+	$_angle: "";
+	@if $angle == "to top" or $angle == "bottom" {
+	  $_angle-with-vendor-prefix: bottom;
+	  $_angle: to top;
+	} @else if $angle == "to right" or $angle == "left" {
+	  $_angle-with-vendor-prefix: left;
+	  $_angle: to right;
+	} @else if $angle == "to bottom" or $angle == "top" {
+	  $_angle-with-vendor-prefix: top;
+	  $_angle: to bottom;
+	} @else if $angle == "to left" or $angle == "right" {
+	  $_angle-with-vendor-prefix: right;
+	  $_angle: to left;
+	} @else if $angle == "to top right" or $angle == "bottom left" {
+	  $_angle-with-vendor-prefix: bottom left;
+	  $_angle: to top right;
+	} @else if $angle == "to bottom right" or $angle == "top left" {
+	  $_angle-with-vendor-prefix: top left;
+	  $_angle: to bottom right;
+	} @else if $angle == "to bottom left" or $angle == "top right" {
+	  $_angle-with-vendor-prefix: top right;
+	  $_angle: to bottom left;
+	} @else if $angle == "to top left" or $angle == "bottom right" {
+	  $_angle-with-vendor-prefix: bottom right;
+	  $_angle: to top left;
+	} @else {
+	  $_angle-with-vendor-prefix: $angle % 360;
+	  $_angle: (90 - $angle) % 360;
+	}
+	background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: linear-gradient($_angle, $color-stops);
+  }
+
+/* mixin for multiline */
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
+@mixin ellipsisMaxHeight($lineHeight: 1.2em, $lineCount: 1){
+  overflow: hidden;
+  position: relative;
+  max-height: $lineHeight * $lineCount;
+}
+
+@mixin ellipsisHeight($lineHeight: 1.2em, $lineCount: 1){
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  height: $lineHeight * $lineCount;
+}
+
+// Implmentation
+// .block-with-text {
+//   @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);
+// }
+
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+	   color: $color;
+	}
+	&:-moz-placeholder {
+	   color:  $color;
+	}
+	&::-moz-placeholder {
+	   color:  $color;
+	}
+	&:-ms-input-placeholder {
+	   color:  $color;
+	}
+}
+
+@mixin center-image(){
+	display: block;
+	height: auto;
+	margin: auto;
+	min-height: 100%;
+	min-width: 100%;
+	bottom: -9999px;
+	left: -9999px;
+	position: absolute;
+	right: -9999px;
+	top: -9999px;
+	width: 100%;
+	object-fit: cover;
+}
+
+@mixin btn-normalize--focus{
+	outline: none;
+	color: $white;
+}
+
+/* blur */
+@mixin filter-img( $par: none ) {
+  -webkit-filter: $par;
+  -moz-filter: $par;
+  -o-filter: $par;
+  -ms-filter: $par;
+  filter: $par;
+}
+
+@mixin font-smoothing() {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin box-sizing($bs) {
+	-webkit-box-sizing: $bs;
+	-moz-box-sizing: $bs;
+	box-sizing: $bs;
+}
+
+@mixin background-common{
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@mixin background-cover {
+	@include background-common;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin background-size( $size ) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
+
+@mixin background-center{
+	@include background-common;
+}
+
+/* clearfix*/
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+      clear: both;
+  }
+  *zoom: 1;
+}
+
+
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+  }
+
+
+@mixin departmentColCount( $itemCount){
+	$itemWidth: percentage( 1 / $itemCount );
+	$itemPadding: 20px;
+	width: -webkit-calc(#{$itemWidth} - #{$itemPadding});
+  width:    -moz-calc(#{$itemWidth} - #{$itemPadding});
+  width:         calc(#{$itemWidth} - #{$itemPadding});
+}
+
+// Flexbox display
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	   -moz-flex-wrap: $wrap;
+		-ms-flex-wrap: $wrap;
+			flex-wrap: $wrap;
+  }
+
+  // Flex Direction and Wrap
+  // - applies to: flex containers
+  // <flex-direction> || <flex-wrap>
+  @mixin flex-flow($flow) {
+	-webkit-flex-flow: $flow;
+	   -moz-flex-flow: $flow;
+		-ms-flex-flow: $flow;
+			flex-flow: $flow;
+  }
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify;
+	   -moz-justify-content: $justify;
+		-ms-justify-content: $justify;
+			justify-content: $justify;
+			  -ms-flex-pack: $justify;
+  }
+
+  // Packing Flex Lines
+  // - applies to: multi-line flex containers
+  // flex-start | flex-end | center | space-between | space-around | stretch
+  @mixin align-content($align) {
+	-webkit-align-content: $align;
+	   -moz-align-content: $align;
+		-ms-align-content: $align;
+			align-content: $align;
+  }
+
+  // Cross-axis Alignment
+  // - applies to: flex containers
+  // flex-start | flex-end | center | baseline | stretch
+  @mixin align-items($align) {
+	-webkit-align-items: $align;
+	   -moz-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+  }
+
+  // Cross-axis Alignment
+  // - applies to: flex items
+  // auto | flex-start | flex-end | center | baseline | stretch
+  @mixin align-self($align) {
+	-webkit-align-self: $align;
+	   -moz-align-self: $align;
+		-ms-align-self: $align;
+			align-self: $align;
+  }

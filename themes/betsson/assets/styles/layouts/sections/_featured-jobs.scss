@@ -1,0 +1,57 @@
+/**
+** Featured Jobs
+** - Animated Text
+**/
+.featured-jobs{
+	.typed-cursor,
+	.typed{
+		font-size: 3rem;
+		font-weight: 400;
+		@media (min-width: $screen-sm-min) {
+			font-size: 4.4rem;
+		}
+
+		@media (min-width: $screen-md-min) {
+			font-size: 5rem;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			font-size: 7rem;
+		}
+	}
+
+	.typed-cursor{
+		-webkit-animation: blink 0.7s infinite;
+		-moz-animation: blink 0.7s infinite;
+		animation: blink 0.7s infinite;
+	}
+
+	.typed-container{
+		margin-bottom: 20px;
+		max-height: 126px;
+		height: 126px;
+		overflow: hidden;
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 40px;
+			max-height: 124px;
+			height: 124px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			max-height: 142px;
+			height: 142px;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			max-height: 200px;
+			height: 200px;
+		}
+	}
+
+	.btn-underlined{
+		margin-bottom: 20px;
+	}
+	.typed-strings{
+		display: none;
+	}
+}

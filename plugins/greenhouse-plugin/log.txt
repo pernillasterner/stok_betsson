@@ -1,0 +1,6 @@
+Import date: 02/28/2020 02:15:31 PM
+Pulled jobs: 71
+New jobs: 0
+Updated jobs: 39
+Inactive jobs: 366
+Closed jobs: 0

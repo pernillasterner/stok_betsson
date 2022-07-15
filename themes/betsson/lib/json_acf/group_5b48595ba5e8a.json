@@ -1,0 +1,48 @@
+{
+    "key": "group_5b48595ba5e8a",
+    "title": "Options Page: Default Images",
+    "fields": [
+        {
+            "key": "field_5b48596921b73",
+            "label": "Default Nav Background Image",
+            "name": "default_nav_background_image",
+            "type": "image",
+            "instructions": "This is used as the nav background image when a post\/page has no hero banner.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "betsson-general-settings-default-images"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1533560524
+}

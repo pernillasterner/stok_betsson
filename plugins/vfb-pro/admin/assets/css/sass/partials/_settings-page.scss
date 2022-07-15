@@ -1,0 +1,25 @@
+#vfb-verified-text {
+	.status-1,
+	.status-0 {
+		color: $color-green;
+		font-weight: bold;
+	}
+
+	.status-0 {
+		color: $color-red;
+	}
+
+}
+
+#vfb-deactivate-license {
+	color: $color-red;
+}
+
+#smtp-auth-details,
+#vfb-validation-msgs {
+	display: none;
+
+	&.active {
+		display: table-row-group;
+	}
+}

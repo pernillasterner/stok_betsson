@@ -1,0 +1,122 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+// Media alignment
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  margin: 30px auto;
+  height: auto;
+}
+.alignleft,
+.alignright {
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: $screen-sm-min) {
+  // Only float if not on an extra small device
+  .alignleft {
+    float: left;
+    margin-right: 30px;
+  }
+  .alignright {
+    float: right;
+	margin-left: 30px;
+  }
+  .alignleft + * {
+	clear: right;
+  }
+
+  .alignright + * {
+	clear: left; /* to prevent collition between left & right*/
+  }
+}
+
+// Captions
+.wp-caption {
+	background: none;
+	border: none;
+  img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.wp-caption-text {
+  padding: $thumbnail-caption-padding;
+}
+
+// Text meant only for screen readers
+.screen-reader-text {
+  @extend .sr-only;
+  @extend .sr-only-focusable;
+}
+
+
+
+/*
+     * Make sure images does not wrap inside <p>
+     * https://wordpress.stackexchange.com/questions/7090/stop-wordpress-wrapping-images-in-a-p-tag
+     * Alternative: check if its possible to use shortcake to wrap text belonging to an image inside
+     * a container which is probably the best and most controllable option
+     */
+
+
+	/* Should be inside .editor-output.has-bfc */
+	 .content{
+		figure,
+		img {
+		  display: block;
+		  height: auto;
+		  max-width: 100%;
+		  clear: both; /* to prevent collition between left & right*/
+		  margin-bottom: 30px;
+		}
+
+		figcaption {
+		  padding: 10px;
+		  text-align: center;
+		  text-transform: uppercase;
+		}
+
+
+      /* use this if headings shoulde force-breaks in alignment:*/
+      h1, h2, h3, h4, h5, h6 {
+        /* clear: both; */
+      }
+
+
+	}
+    /* END: should be inside .editor-output.has-bfc */
+
+
+    /* it's important to use ">"" as we don't want to change the behaviour of e.g. <li> */
+    .editor-output.has-bfc > * {
+      margin-bottom: 30px;
+    }
+
+    /* Make sure this is well tested cross browsers, otherwise specify all elements that are not img/figure */
+    .editor-output.has-bfc > *:not(img):not(figure) {
+      overflow: hidden;
+      max-width: 60%;
+      /* alternative look using margin: 0 auto 30px auto; */
+      display: block;
+    }
+
+    .editor-output.has-bfc > figure,
+    .editor-output.has-bfc > img {
+      max-width: 40%;
+    }
+
+    /* This is a hack, make sure it's well tested cross browsers */
+    .editor-output.has-bfc > [style*="center"] {
+      clear: both;
+      margin: 0 auto 30px auto !important;
+    }
